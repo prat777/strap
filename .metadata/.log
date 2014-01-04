@@ -1,0 +1,64 @@
+!SESSION 2014-01-04 15:28:46.205 -----------------------------------------------
+eclipse.buildId=20080514-1211
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:30:21.325
+!MESSAGE C:\WindRiver\workbench-3.0\foundation\4.1.1\x86-win32\bin\wtxregd.exe
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:30:23.991
+!MESSAGE C:\WindRiver\workbench-3.0\dfw\0199bb\x86-win32\bin\dfwserver.exe  -protocol mi -io sockets -useregistry -session dfw-wb301-Developer -registryhost localhost
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:30:26.544
+!MESSAGE Connected to dfwserver at 127.0.0.1, 127.0.0.1:49628, PID=5560, Session="dfw-wb301-Developer"
+
+!ENTRY com.windriver.ide.target 2 0 2014-01-04 15:30:27.327
+!MESSAGE Wind River Registry created a new database at 'C:/WindRiver/.wind/wtxregd.FRC2014DS'.
+
+If you have been using Wind River Workbench before, and you want to migrate your old target connections, please quit Workbench and the Registry now, search for the file named 'wtxregd.FRC2014DS' in your old installation and copy it to the new location.
+
+For details, see the Online Help.
+!SESSION 2014-01-04 15:37:10.174 -----------------------------------------------
+eclipse.buildId=20080514-1211
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:37:48.301
+!MESSAGE C:\WindRiver\workbench-3.0\dfw\0199bb\x86-win32\bin\dfwserver.exe  -protocol mi -io sockets -useregistry -session dfw-wb301-Developer -registryhost localhost
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:37:48.716
+!MESSAGE Connected to dfwserver at 127.0.0.1, 127.0.0.1:50014, PID=5772, Session="dfw-wb301-Developer"
+!SESSION 2014-01-04 15:42:26.406 -----------------------------------------------
+eclipse.buildId=20080514-1211
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:42:55.592
+!MESSAGE C:\WindRiver\workbench-3.0\dfw\0199bb\x86-win32\bin\dfwserver.exe  -protocol mi -io sockets -useregistry -session dfw-wb301-Developer -registryhost localhost
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:42:56.114
+!MESSAGE Connected to dfwserver at 127.0.0.1, 127.0.0.1:50150, PID=264, Session="dfw-wb301-Developer"
+!SESSION 2014-01-04 15:46:43.218 -----------------------------------------------
+eclipse.buildId=20080514-1211
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:47:08.281
+!MESSAGE C:\WindRiver\workbench-3.0\dfw\0199bb\x86-win32\bin\dfwserver.exe  -protocol mi -io sockets -useregistry -session dfw-wb301-Developer -registryhost localhost
+
+!ENTRY com.windriver.ide.target 1 0 2014-01-04 15:47:09.310
+!MESSAGE Connected to dfwserver at 127.0.0.1, 127.0.0.1:50356, PID=3008, Session="dfw-wb301-Developer"
+
+!ENTRY edu.wpi.FIRSTDownloader 4 0 2014-01-04 15:48:58.994
+!MESSAGE Please set your team number and file under Window->Preferences
+
+!ENTRY edu.wpi.FIRSTDownloader 4 0 2014-01-04 15:49:33.791
+!MESSAGE Please set your team number and file under Window->Preferences
