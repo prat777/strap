@@ -1,4 +1,4 @@
-strap
+[strap]() - A FRC C++ Program
 =====
-
-FRC Robot Program Built With Wpilib
+<img src="FIRSTocat.png">
+```strap``` is a reppository that is our team's workspace for the Wind River IDE.
