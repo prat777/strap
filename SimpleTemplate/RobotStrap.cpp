@@ -12,7 +12,7 @@ class RobotStrap : public SimpleRobot
 	
 	RobotDrive myRobot; // robot drive system
 	Joystick stick; // only joystick
-	
+
 	public:
 		
 		/* Constructor */
@@ -23,6 +23,7 @@ class RobotStrap : public SimpleRobot
 		void Test( void );
 		void Autonomous( void );
 		void OperatorControl( void );
+
 };
 
 /* Constructor */
@@ -59,14 +60,15 @@ void RobotStrap::Autonomous( void )
  */
 void RobotStrap::OperatorControl( void )
 {
+	DriverStation* ds = DriverStation::GetInstance();
 	myRobot.SetSafetyEnabled(true);
-
-	//voltage = DriverStation.getInstance().getBatteryVoltage();
 
 	while (IsOperatorControl())
 	{
-		myRobot.ArcadeDrive(stick); // drive with arcade style (use right stick)
-		Wait(0.005);				// wait for a motor update time
+		/* Portion of code that gets status updates */
+		float voltage = ds -> GetBatteryVoltage();
+		
+		/* Portion of code that controls arm */
 		bool launchValue;
 		bool rewindValue;
 		launchValue = stick.GetRawButton(1);
@@ -80,6 +82,10 @@ void RobotStrap::OperatorControl( void )
 		{
 			//rewind arm
 		}
+		
+		/* Portion of code that sets up driving */
+		myRobot.ArcadeDrive(stick); // drive with arcade style (use right stick)
+		Wait(0.005);				// wait for a motor update time
 	}
 }
 

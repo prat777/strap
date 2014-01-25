@@ -1,5 +1,5 @@
 SimpleTemplate_partialImage/Debug/Objects/SimpleTemplate/RobotStrap.o:  \
- C:/Users/Developer/Desktop/FRC/SimpleTemplate/RobotStrap.cpp \
+ C:/Users/Developer/Desktop/strap/SimpleTemplate/RobotStrap.cpp \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/vxworks-6.3/target/h/string.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h \
