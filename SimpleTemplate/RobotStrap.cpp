@@ -36,9 +36,16 @@ void RobotStrap::Autonomous( void )
  */
 void RobotStrap::OperatorControl( void )
 {
+	// Get an instance of the driver station to use its API
 	DriverStation* ds = DriverStation::GetInstance();
+	
+	// Set the safety
 	myRobot.SetSafetyEnabled(true);
 
+	// Establish arm
+	Jaguar* arm = new Jaguar(ARM_MOTOR_PORT);
+	
+	// Infinite loop
 	while (IsOperatorControl())
 	{
 		/* Portion of code that gets status updates */
@@ -51,12 +58,14 @@ void RobotStrap::OperatorControl( void )
 		rewindValue = stick.GetRawButton(2);
 		if(launchValue)
 		{
-			//make arm launch forwards
+			// make arm launch forwards
+			arm -> Set(1);
 			
 		}
 		if(rewindValue)
 		{
-			//rewind arm
+			// make the arm launch backwards
+			arm -> Set(-1);
 		}
 		
 		/* Portion of code that sets up driving */
