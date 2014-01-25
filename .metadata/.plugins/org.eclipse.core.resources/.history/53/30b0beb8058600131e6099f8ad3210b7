@@ -1,0 +1,7 @@
+#ifndef CONSTANTS
+#define CONSTANTS
+
+static const UINT32 LEFT_MOTOR_PORT;
+
+
+#endif /* CONSTANTS */

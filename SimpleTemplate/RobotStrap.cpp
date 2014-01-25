@@ -1,37 +1,13 @@
 #include "WPILib.h"
-
-/**
- * This is a demo program showing the use of the RobotBase class.
- * The SimpleRobot class is the base of a robot application that will automatically call your
- * Autonomous and OperatorControl methods at the right time as controlled by the switches on
- * the driver station or the field controls.
- */ 
-class RobotStrap : public SimpleRobot
-{
-	private:
-	
-	RobotDrive myRobot; // robot drive system
-	Joystick stick; // only joystick
-
-	public:
-		
-		/* Constructor */
-		RobotStrap();
-		~RobotStrap();
-		
-		/* Member functions */
-		void Test( void );
-		void Autonomous( void );
-		void OperatorControl( void );
-
-};
+#include "RobotStrap.h"
+#include "constants.h"
 
 /* Constructor */
 RobotStrap::RobotStrap() :
 	// Initialize all the member objects in the same order
 	// declared within the body.
-	myRobot(1, 2),
-	stick(1)
+	myRobot(LEFT_MOTOR_PORT, RIGHT_MOTOR_PORT),
+	stick(JOYSTICK_PORT)
 {
 	myRobot.SetExpiration(0.1);
 }
