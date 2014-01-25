@@ -1,4 +1,6 @@
 #include "WPILib.h"
+#inlclude "DriverStation.h"
+
 
 /**
  * This is a demo program showing the use of the RobotBase class.
@@ -36,10 +38,24 @@ public:
 	void OperatorControl()
 	{
 		myRobot.SetSafetyEnabled(true);
+
+		DriverStation ds = DriverStation.getInstance();
+	
 		while (IsOperatorControl())
 		{
 			myRobot.ArcadeDrive(stick); // drive with arcade style (use right stick)
 			Wait(0.005);				// wait for a motor update time
+			bool launchValue;
+			bool rewindValue;
+			launchValue = stick.GetRawButton(1);
+			rewindValue = stick.GetRawButton(2);
+			if(launchValue){
+				//make arm launch forwards
+				
+			}
+			if(rewindValue){
+				//rewind arm
+			}
 		}
 	}
 	
