@@ -71,12 +71,15 @@ void RobotStrap::OperatorControl( void )
 		bool launchValue = stick.GetRawButton(1);
 		bool rewindValue = stick.GetRawButton(2);
 		
+		// Determine the speed to throw the arm at
+		float speed = (stick.getThrottle() - (-1)) / 2;
+		
 		if(launchValue)
 			// make arm launch forwards
-			arm -> Set(0.25);
+			arm -> Set(1 * speed);
 		else if(rewindValue)
 			// make the arm launch backwards
-			arm -> Set(-0.25);
+			arm -> Set(-1 * speed);
 		else
 			arm -> Set(0);
 		
