@@ -27,7 +27,7 @@ void RobotStrap::printStatus( void )
 
 	// Print the data
 	printf("=======STATUS=======\n");
-	printf("Battery Voltage: %f", voltage);
+	printf("Battery Voltage: %f\n", voltage);
 }
 
 /**
