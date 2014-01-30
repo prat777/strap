@@ -57,15 +57,16 @@ void RobotStrap::OperatorControl( void )
 	// Set the safety
 	myRobot.SetSafetyEnabled(true);
 
-	// Establish arm
+	// Establish end-effectors
 	Jaguar* arm = new Jaguar(ARM_MOTOR_PORT);
+	Compressor* c = new Compressor(SPIKE_RELAY_PORT, PRESSURE_SWITCH_PORT);
+	
+	// Start the compressor
+	c -> Start();
 	
 	// Infinite loop
 	while (IsOperatorControl())
 	{	
-		// Fill compressor when tank is low
-		
-		
 		// Print status if the button is pressed
 		if(stick.GetRawButton(11))
 			this -> printStatus();
