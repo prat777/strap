@@ -44,9 +44,9 @@ void RobotStrap::Test( void )
 void RobotStrap::Autonomous( void )
 {
 	myRobot.SetSafetyEnabled(false);
-	myRobot.Drive(-0.5, 0.0); 	// drive forwards half speed
-	Wait(2.0); 				//    for 2 seconds
-	myRobot.Drive(0.0, 0.0); 	// stop robot
+	myRobot.Drive(-0.5, 0.0); // drive forwards half speed
+	Wait(2.0); // for 2 seconds
+	myRobot.Drive(0.0, 0.0); // stop robot
 }
 
 /**
@@ -63,6 +63,9 @@ void RobotStrap::OperatorControl( void )
 	// Infinite loop
 	while (IsOperatorControl())
 	{	
+		// Fill compressor when tank is low
+		
+		
 		// Print status if the button is pressed
 		if(stick.GetRawButton(11))
 			this -> printStatus();
@@ -72,7 +75,7 @@ void RobotStrap::OperatorControl( void )
 		bool rewindValue = stick.GetRawButton(2);
 		
 		// Determine the speed to throw the arm at
-		float speed = (stick.getThrottle() - (-1)) / 2;
+		float speed = (stick.GetThrottle() - (-1)) / 2;
 		
 		if(launchValue)
 			// make arm launch forwards
