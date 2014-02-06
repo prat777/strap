@@ -15,4 +15,8 @@ static const UINT32 ARM_MOTOR_PORT = 3;
 static const UINT32 SPIKE_RELAY_PORT = 2;
 static const UINT32 PRESSURE_SWITCH_PORT = 4;
 
+// Limit switch ports
+static const UINT32 FWD_LIM_PORT = 10;
+static const UINT32 BWD_LIM_PORT = 9;
+
 #endif /* CONSTANTS */

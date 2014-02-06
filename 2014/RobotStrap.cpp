@@ -61,6 +61,10 @@ void RobotStrap::OperatorControl( void )
 	Jaguar* arm = new Jaguar(ARM_MOTOR_PORT);
 	Compressor* c = new Compressor(SPIKE_RELAY_PORT, PRESSURE_SWITCH_PORT);
 	
+	// Establish limit switches
+	DigitalInput *fwdlim = new DigitalInput(FWD_LIM_PORT);
+	DigitalInput *bwdlim = new DigitalInput(BWD_LIM_PORT);
+	
 	// Start the compressor
 	c -> Start();
 	
@@ -78,10 +82,10 @@ void RobotStrap::OperatorControl( void )
 		// Determine the speed to throw the arm at
 		float speed = (stick.GetThrottle() - (-1)) / 2;
 		
-		if(launchValue)
+		if(launchValue /* && !(fwdlim -> Get()) */)
 			// make arm launch forwards
 			arm -> Set(1 * speed);
-		else if(rewindValue)
+		else if(rewindValue /* && !(bwdlim -> Get()) */)
 			// make the arm launch backwards
 			arm -> Set(-1 * speed);
 		else
