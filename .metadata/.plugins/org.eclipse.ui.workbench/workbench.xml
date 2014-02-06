@@ -31,23 +31,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotStrap.cpp" partName="RobotStrap.cpp" path="C:/Users/Developer/Desktop/strap/2014/RobotStrap.cpp" title="RobotStrap.cpp" tooltip="2014/RobotStrap.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/2014/RobotStrap.cpp"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="286"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RobotStrap.h" partName="RobotStrap.h" path="C:/Users/Developer/Desktop/strap/2014/RobotStrap.h" title="RobotStrap.h" tooltip="2014/RobotStrap.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/2014/RobotStrap.h"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="54"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="constants.h" partName="constants.h" path="C:/Users/Developer/Desktop/strap/SimpleTemplate/constants.h" title="constants.h" tooltip="SimpleTemplate/constants.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleTemplate/constants.h"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="154"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="MyRobot.cpp" partName="MyRobot.cpp" path="C:/Users/Developer/Desktop/strap/SimpleTemplate/MyRobot.cpp" title="MyRobot.cpp" tooltip="SimpleTemplate/MyRobot.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleTemplate/MyRobot.cpp"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="2193"/>
 </editor>
 </editors>
 <views>
@@ -58,8 +48,6 @@
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="com.windriver.ide.ui.project.WRFileView" partName="File Navigator">
 <viewState LINK_NAVIGATOR_TO_EDITOR="0" columnDefaultLayout="100:76:90:50" columnLayout="100:76:0:0" showDateColumn="false" showPathColumn="true" showSizeColumn="false" sorter="0">
-<selection>&#x0A;<element path="/SimpleTemplate/.project"/>
-</selection>
 <filters>&#x0A;<filter element=".project" ignoreCase="true" isEnabled="false" isFromExtension="true" isFullPathMatch="false"/>
 <filter element=".wr*" ignoreCase="true" isEnabled="false" isFromExtension="true" isFullPathMatch="false"/>
 <filter element="*.d" ignoreCase="true" isEnabled="false" isFromExtension="true" isFullPathMatch="false"/>
@@ -84,9 +72,6 @@
 <expanded>
 <element path="Conn///FRC2014DS.Local"/>
 </expanded>
-<selection>
-<element path="Conn///FRC2014DS.Local"/>
-</selection>
 </viewState>
 </view>
 <view id="com.windriver.ide.ui.build.WRBuildConsoleView" partName="Build Console">
@@ -295,76 +280,12 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SimpleTemplate/RobotStrap.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/2014/RobotStrap.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/2014/RobotStrap.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/2014/RobotStrap.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SimpleTemplate/constants.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/2014/constants.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SimpleTemplate/RobotStrap.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SimpleTemplate/MyRobot.cpp"/>
 </editors>
-<item historyLabel="RobotStrap.cpp" index="0">
-<position info="not_deleted" x="1710" y="0"/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position/>
-</item>
-<item historyLabel="RobotStrap.cpp" index="0">
-<position info="not_deleted" x="231" y="0"/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="RobotStrap.cpp" index="0">
-<position info="not_deleted" x="231" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position info="not_deleted" x="122" y="0"/>
-</item>
-<item historyLabel="RobotStrap.cpp" index="0">
-<position info="not_deleted" x="231" y="0"/>
-</item>
-<item historyLabel="RobotStrap.cpp" index="0">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position info="not_deleted" x="122" y="0"/>
-</item>
-<item historyLabel="RobotStrap.cpp" index="0">
-<position info="not_deleted" x="306" y="0"/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="436" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position info="not_deleted" x="232" y="0"/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="436" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position info="not_deleted" x="142" y="0"/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="436" y="0"/>
-</item>
-<item historyLabel="constants.h" index="2">
-<position info="not_deleted" x="204" y="0"/>
-</item>
-<item historyLabel="RobotStrap.h" index="1">
-<position info="not_deleted" x="436" y="0"/>
-</item>
-<item historyLabel="RobotStrap.cpp" index="0">
-<position info="not_deleted" x="1195" y="0"/>
-</item>
 <item historyLabel="constants.h" index="2">
 <position info="not_deleted" x="203" y="0"/>
 </item>
@@ -443,8 +364,75 @@
 <item historyLabel="RobotStrap.cpp" index="4">
 <position info="not_deleted" x="98" y="0"/>
 </item>
-<item active="true" historyLabel="RobotStrap.h" index="5">
+<item historyLabel="RobotStrap.h" index="5">
 <position info="not_deleted" x="54" y="0"/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="6">
+<position/>
+</item>
+<item historyLabel="constants.h" index="7"/>
+<item historyLabel="RobotStrap.cpp" index="6">
+<position info="not_deleted" x="260" y="0"/>
+</item>
+<item historyLabel="constants.h" index="8">
+<position/>
+</item>
+<item historyLabel="RobotStrap.h" index="5">
+<position/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="6">
+<position/>
+</item>
+<item historyLabel="constants.h" index="8">
+<position/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="6">
+<position/>
+</item>
+<item historyLabel="constants.h" index="8">
+<position/>
+</item>
+<item historyLabel="RobotStrap.h" index="5">
+<position/>
+</item>
+<item historyLabel="constants.h" index="8">
+<position info="not_deleted" x="466" y="0"/>
+</item>
+<item historyLabel="RobotStrap.h" index="5">
+<position/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="6">
+<position/>
+</item>
+<item historyLabel="constants.h" index="8">
+<position info="not_deleted" x="449" y="12"/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="6">
+<position info="not_deleted" x="1495" y="0"/>
+</item>
+<item historyLabel="constants.h" index="8">
+<position info="not_deleted" x="508" y="0"/>
+</item>
+<item historyLabel="RobotStrap.h" index="5">
+<position/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="6">
+<position/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="9">
+<position/>
+</item>
+<item historyLabel="MyRobot.cpp" index="10">
+<position/>
+</item>
+<item historyLabel="RobotStrap.cpp" index="9">
+<position/>
+</item>
+<item historyLabel="MyRobot.cpp" index="10">
+<position info="not_deleted" x="2369" y="0"/>
+</item>
+<item active="true" historyLabel="MyRobot.cpp" index="10">
+<position info="not_deleted" x="100" y="26"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -467,6 +455,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MyRobot.cpp" tooltip="SimpleTemplate/MyRobot.cpp">
+<persistable path="/SimpleTemplate/MyRobot.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotStrap.cpp" tooltip="2014/RobotStrap.cpp">
+<persistable path="/2014/RobotStrap.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RobotStrap.h" tooltip="2014/RobotStrap.h">
+<persistable path="/2014/RobotStrap.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="constants.h" tooltip="2014/constants.h">
+<persistable path="/2014/constants.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="constants.h" tooltip="SimpleTemplate/constants.h">
 <persistable path="/SimpleTemplate/constants.h"/>
 </file>
@@ -475,9 +475,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name=".project" tooltip="SimpleTemplate/.project">
 <persistable path="/SimpleTemplate/.project"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MyRobot.cpp" tooltip="SimpleTemplate/MyRobot.cpp">
-<persistable path="/SimpleTemplate/MyRobot.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name=".wrproject" tooltip="SimpleTemplate/.wrproject">
 <persistable path="/SimpleTemplate/.wrproject"/>
