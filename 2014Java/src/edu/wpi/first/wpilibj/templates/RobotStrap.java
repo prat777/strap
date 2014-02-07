@@ -54,7 +54,7 @@ public class RobotStrap extends SimpleRobot
         leftStick = new Joystick(LEFT_JOYSTICK_PORT);
         rightStick = new Joystick(RIGHT_JOYSTICK_PORT);
         arm = new Jaguar(ARM_MOTOR_PORT);
-    	c = new Compressor(SPIKE_RELAY_PORT, PRESSURE_SWITCH_PORT);
+    	c = new Compressor(PRESSURE_SWITCH_PORT, SPIKE_RELAY_PORT);
     	fwdlim = new DigitalInput(FWD_LIM_PORT);
     	bwdlim = new DigitalInput(BWD_LIM_PORT);
     }
