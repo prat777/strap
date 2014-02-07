@@ -86,10 +86,10 @@ public class RobotStrap extends SimpleRobot
     		// Determine the speed to throw the arm at
     		double speed = (rightStick.getThrottle() - (-1)) / 2;
     
-    		if(launchValue /* && !(fwdlim.get()) */)
+    		if(launchValue /* && fwdlim.get() */)
     			// make arm launch forwards
     			arm.set(1 * speed);
-    		else if(rewindValue /* && !(bwdlim.get()) */)
+    		else if(rewindValue /* && bwdlim.get() */)
     			// make the arm launch backwards
     			arm.set(-1 * speed);
     		else
