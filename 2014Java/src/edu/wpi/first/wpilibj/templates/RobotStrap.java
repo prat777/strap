@@ -33,8 +33,8 @@ public class RobotStrap extends SimpleRobot
     private final int ARM_MOTOR_PORT = 3;
     
     // Pneumatic system ports
-    private final int SPIKE_RELAY_PORT = 2;
-    private final int PRESSURE_SWITCH_PORT = 4;
+    private final int SPIKE_RELAY_PORT = 1;
+    private final int PRESSURE_SWITCH_PORT = 8;
     
     // Limit switch ports
     private final int FWD_LIM_PORT = 10;
