@@ -95,8 +95,8 @@ public class RobotStrap extends SimpleRobot
     		else
     			arm.set(0);
             
-            // tank drive
-            drivetrain.tankDrive(leftStick, rightStick);
+            // arcade drive
+            drivetrain.arcadeDrive(rightStick);
             
             // delay
             Timer.delay(0.005);
