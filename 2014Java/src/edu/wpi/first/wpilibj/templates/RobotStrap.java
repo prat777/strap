@@ -116,7 +116,8 @@ public class RobotStrap extends SimpleRobot
     	double voltage = ds.getBatteryVoltage();
     
         // Print the voltage
-        dslcd.println(DriverStationLCD.Line.kMain6, 1, "Battery Voltage: " + String.valueOf(voltage));
+        dslcd.println(DriverStationLCD.Line.kUser6, 1, "Battery Voltage: " + String.valueOf(voltage));
+        dslcd.updateLCD();
     }
     
     /* Test function */
