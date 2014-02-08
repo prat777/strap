@@ -19,6 +19,10 @@ public class RobotStrap extends SimpleRobot
     private RobotDrive drivetrain;
     private Joystick leftStick;
     private Joystick rightStick;
+    private Jaguar arm;
+    private Compressor c;
+    private DigitalInput fwdlim;
+    private DigitalInput fwdlim;
     
     /* Set up all the constant values */
     // Drive system motor ports
@@ -46,9 +50,13 @@ public class RobotStrap extends SimpleRobot
         // Throw caution to the wind
         getWatchdog().setEnabled(false);
         
-        drivetrain = new RobotDrive(LEFT_MOTOR_PORT, RIGHT_MOTOR_PORT); // create RobotDrive
-        leftStick = new Joystick(LEFT_JOYSTICK_PORT); // and joysticks
+        drivetrain = new RobotDrive(LEFT_MOTOR_PORT, RIGHT_MOTOR_PORT);
+        leftStick = new Joystick(LEFT_JOYSTICK_PORT);
         rightStick = new Joystick(RIGHT_JOYSTICK_PORT);
+        arm = new Jaguar(ARM_MOTOR_PORT);
+    	c = new Compressor(PRESSURE_SWITCH_PORT, SPIKE_RELAY_PORT);
+    	fwdlim = new DigitalInput(FWD_LIM_PORT);
+    	bwdlim = new DigitalInput(BWD_LIM_PORT);
     }
     
     /* Autonomous */
@@ -61,15 +69,7 @@ public class RobotStrap extends SimpleRobot
     /* Telo-op */
     public void operatorControl()
     {
-        // Establish end-effectors
-        Jaguar arm = new Jaguar(ARM_MOTOR_PORT);
-    	Compressor c = new Compressor(SPIKE_RELAY_PORT, PRESSURE_SWITCH_PORT);
-    
-    	// Establish limit switches
-    	DigitalInput fwdlim = new DigitalInput(FWD_LIM_PORT);
-    	DigitalInput bwdlim = new DigitalInput(BWD_LIM_PORT);
-    
-    	// Start the compressor
+    	// Start the auto compressor manager
     	c.start();
         
         while (true && isOperatorControl() && isEnabled())
@@ -86,10 +86,10 @@ public class RobotStrap extends SimpleRobot
     		// Determine the speed to throw the arm at
     		double speed = (rightStick.getThrottle() - (-1)) / 2;
     
-    		if(launchValue /* && !(fwdlim.get()) */)
+    		if(launchValue /* && fwdlim.get() */)
     			// make arm launch forwards
     			arm.set(1 * speed);
-    		else if(rewindValue /* && !(bwdlim.get()) */)
+    		else if(rewindValue /* && bwdlim.get() */)
     			// make the arm launch backwards
     			arm.set(-1 * speed);
     		else
@@ -116,7 +116,8 @@ public class RobotStrap extends SimpleRobot
     	double voltage = ds.getBatteryVoltage();
     
         // Print the voltage
-        dslcd.println(DriverStationLCD.Line.kMain6, 1, "Battery Voltage: " + String.valueOf(voltage));
+        dslcd.println(DriverStationLCD.Line.kUser6, 1, "Battery Voltage: " + String.valueOf(voltage));
+        dslcd.updateLCD();
     }
     
     /* Test function */
