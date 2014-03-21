@@ -31,7 +31,7 @@ public class RobotStrap extends SimpleRobot
     private final DigitalInput armbwdlim;
     private final Solenoid latch;
     private final Solenoid s2;
-    private final Solenoid s3;
+    private final Solenoid s1;
     
     /* Set up all the constant values */
     // Drive system motor ports
@@ -46,7 +46,7 @@ public class RobotStrap extends SimpleRobot
     
     // Arm motor ports
     private final int ARM1_MOTOR_PORT = 7;
-    private final int ARM2_MOTOR_PORT = 8;
+    private final int ARM2_MOTOR_PORT = 9;
     
     // Conveyor motor ports
     private final int CONV1_MOTOR_PORT = 5;
@@ -76,15 +76,17 @@ public class RobotStrap extends SimpleRobot
         conv2 = new Victor(CONV2_MOTOR_PORT);
         armfwdlim = new DigitalInput(ARM_FWD_LIM_PORT);
     	armbwdlim = new DigitalInput(ARM_BWD_LIM_PORT);
-        latch = new Solenoid(1);
+        s1 = new Solenoid(1);
         s2 = new Solenoid(2);
-        s3 = new Solenoid(3);
+        latch = new Solenoid(3);
     }
     
     /* Autonomous */
     public void autonomous() {
-        drivetrain.drive(0.5, 0.0); // drive 50% forward with 0% turn
-        Timer.delay(2.0); // wait 2 seconds
+        drivetrain.setSafetyEnabled(false);
+        c.start();
+        drivetrain.drive(-1, 0.0); // drive 50% forward with 0% turn
+        Timer.delay(1); // wait for a bit
         drivetrain.drive(0.0, 0.0); // drive 0% forward, 0% turn (stop)
     }
     
@@ -92,10 +94,10 @@ public class RobotStrap extends SimpleRobot
     public void operatorControl()
     {
     	// Start the auto compressor manager and hold all solenoids
-    	latch.set(latch.get());
+    	c.start();
+        s1.set(s1.get());
         s2.set(s2.get());
-        s3.set(s3.get());
-        c.start();
+        latch.set(latch.get());
         
         while (true && isOperatorControl() && isEnabled())
         {
@@ -105,24 +107,27 @@ public class RobotStrap extends SimpleRobot
             
             // enable soleniod swapping
             if(leftStick.getRawButton(7))
-                latch.set(!latch.get());
+                s1.set(!s1.get());
             if(leftStick.getRawButton(6))
                 s2.set(!s2.get());
             if(leftStick.getRawButton(8))
-                s3.set(!s3.get());
+                latch.set(!latch.get());
             
-            // get conveyor stuff going
+            // Conveyor controls
             boolean upValue = leftStick.getRawButton(3);
             boolean downValue = leftStick.getRawButton(2);
+            boolean kickupValue = leftStick.getRawButton(1);
+            boolean kickdownValue = rightStick.getRawButton(2);
             double speedConv = (leftStick.getAxis(Joystick.AxisType.kZ) + (-1)) / 2 * -1;
+            
             if(upValue)
             {
-                conv1.set(2 * speedConv);
+                conv1.set(-2 * speedConv);
                 conv2.set(1 * speedConv);
             }
             else if(downValue)
             {
-                conv1.set(-2 * speedConv);
+                conv1.set(2 * speedConv);
                 conv2.set(-1 * speedConv);
             }
             else
@@ -130,28 +135,46 @@ public class RobotStrap extends SimpleRobot
                 conv1.set(0);
                 conv2.set(0);
             } 
-            
-            // limit switch auto latching
-            if(armbwdlim.get())
+            if(kickupValue)
             {
+                arm1.set(-1);
+                arm2.set(-1);
+            }
+            else if(kickdownValue)
+            {
+                arm1.set(1);
+                arm2.set(1);
+            }
+            else
+            {
+                arm1.set(0);
+                arm2.set(0);
+            } 
+            
+    	    /* set up the controls for throwing the arms
+            boolean fire = leftStick.getRawButton(1);
+            boolean reload = leftStick.getRawButton(4);
+            
+            if(fire && armbwdlim.get())
+            {
+                // open the latch
                 latch.set(true);
-                printStuff("Latch fired by limit switch", Line.kUser3);
+                arm1.set(1);
+                arm2.set(1);
             }
-            
-    	    // Determine the speed to throw the arm at
-            if(leftStick.getAxis(Joystick.AxisType.kY) >= 0 && !armfwdlim.get())
+            if(reload && armfwdlim.get())
             {
-                arm1.set(leftStick.getAxis(Joystick.AxisType.kY));
-                arm2.set(leftStick.getAxis(Joystick.AxisType.kY));
+                arm1.set(-1);
+                arm2.set(-1);
             }
-            if(leftStick.getAxis(Joystick.AxisType.kY) <= 0 && !armbwdlim.get())
+            else
             {
-                arm1.set(leftStick.getAxis(Joystick.AxisType.kY));
-                arm2.set(leftStick.getAxis(Joystick.AxisType.kY));
+                arm1.set(0);
+                arm2.set(0);
             }
-            
+            */
             // arcade drive
-            drivetrain.arcadeDrive(rightStick);
+            drivetrain.tankDrive(rightStick, leftStick);
             
             // delay
             Timer.delay(0.005);
