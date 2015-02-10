@@ -77,18 +77,18 @@ void RobotStrap::OperatorControl( void )
 			this -> printStatus();
 		
 		// Move the arm based on buttons
-		bool launchValue = stickRight.GetRawButton(1);
-		bool rewindValue = stickRight.GetRawButton(2);
+		bool raiseValue = stickRight.GetRawButton(1);
+		bool lowerValue = stickRight.GetRawButton(2);
 		
 		// Determine the speed to throw the arm at
 		float speed = (stickRight.GetThrottle() - (-1)) / 2;
 		
-		if(launchValue /* && !(fwdlim -> Get()) */)
+		if(raiseValue /* && !(fwdlim -> Get()) */)
 			// make arm launch forwards
-			arm -> Set(1 * speed);
-		else if(rewindValue /* && !(bwdlim -> Get()) */)
+			arm -> Set(0.75 * speed);
+		else if(lowerValue /* && !(bwdlim -> Get()) */)
 			// make the arm launch backwards
-			arm -> Set(-1 * speed);
+			arm -> Set(-0.75 * speed);
 		else
 			arm -> Set(0);
 		
