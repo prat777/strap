@@ -59,7 +59,7 @@ void RobotStrap::OperatorControl( void )
 	myRobot.SetSafetyEnabled(true);
 
 	// Establish end-effectors
-	Jaguar* lift = new Jaguar(LIFT_MOTOR_PORT);
+	Talon* lift = new Talon(LIFT_MOTOR_PORT);
 	Compressor* c = new Compressor(SPIKE_RELAY_PORT, PRESSURE_SWITCH_PORT);
 	
 	// Establish limit switches
